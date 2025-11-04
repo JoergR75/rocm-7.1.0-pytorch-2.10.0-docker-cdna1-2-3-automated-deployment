@@ -50,14 +50,17 @@ If an existing ROCm installation is detected, it removes ROCm and related packag
 Install **Ubuntu 22.04.5 LTS** or **Ubuntu 24.04.3 LTS** (Server or Desktop version).
 
 **Recommendations:**
-- Use a fresh Ubuntu installation if possible.
-- Assign the full storage capacity during installation.
-- Install **OpenSSH** for remote SSH management.
-- The script automatically checks the system for installed versions of ROCm, PyTorch, and Docker, and removes them if found.
-  - On a fresh Ubuntu installation, the script automatically skips the deinstallation routine, as illustrated below.
+- Use a fresh Ubuntu installation if possible
+- Assign the full storage capacity during installation
+- Install **OpenSSH** for remote SSH management
+- The script automatically checks the system for installed versions of ROCm, PyTorch, and Docker, and removes them if found
+  - On a fresh Ubuntu installation, the script automatically skips the deinstallation routine, as illustrated below
     <img width="697" height="188" alt="{DB29AEE6-CF12-4D0D-BA9F-611E73DBE146}" src="https://github.com/user-attachments/assets/48516cb6-e7bd-4c7e-94bb-f3ec9a95b243" />
   - If an existing version is detected, it will be deleted, regardless of whether it is the same or an older release.
     <img width="724" height="312" alt="{ABC66E35-246B-49CD-B988-5C19DA511ACB}" src="https://github.com/user-attachments/assets/c0a87932-fb0e-4adb-8bf9-cbe80d13f528" />
+- SBIOS settings:
+  - When using Linux, you should disable Secure Boot
+  - On WRX80 and WRX90 motherboard solutions, make sure SR-IOV is enabled — there are known issues with Ubuntu Linux detecting the network otherwise
 
 ### 2️⃣ **Download the Script from the Repository**
 ```bash
